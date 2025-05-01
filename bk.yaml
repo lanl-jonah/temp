@@ -1,0 +1,451 @@
+type: spec.insomnia.rest/5.0
+name: bankong-transactions.yaml
+meta:
+  id: wrk_f65c939c242147d4b7d6fd4ae3499572
+  created: 1746115220972
+  modified: 1746115220972
+collection:
+  - name: AI Generated Requests
+    meta:
+      id: fld_77600221999343f891474f8c7f1c9b0b
+      created: 1704355176896
+      modified: 1726841308240
+      sortKey: -1704355176896
+    children:
+      - url: "{{ _.base_url }}/{{ _.transaction_id }}"
+        name: Get specific transaction
+        meta:
+          id: req_16b6594e257644bb85d8b5f9111b9604
+          created: 1704355176898
+          modified: 1726841308241
+          isPrivate: false
+          sortKey: -1704355176898
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/"
+        name: List transactions
+        meta:
+          id: req_4d5cdb5741cf4aa7ba6ec1ed6cedd317
+          created: 1704355176898
+          modified: 1726841308241
+          isPrivate: false
+          sortKey: -1704355176898
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/{{ _.transaction_id }}"
+        name: Get specific transaction
+        meta:
+          id: req_996b8b2b5b14472e8f734ad60ed8409d
+          created: 1704355176898
+          modified: 1726841308240
+          isPrivate: false
+          sortKey: -1704355176898
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/"
+        name: List transactions
+        meta:
+          id: req_cd9f5656542e426cb42c3098bfcae54b
+          created: 1704355176898
+          modified: 1726841308242
+          isPrivate: false
+          sortKey: -1704355176898
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Transactions
+    meta:
+      id: fld_70a4a580ce41474d8dead4ff191aab50
+      created: 1704355180342
+      modified: 1726841308240
+      sortKey: -1704355180342
+      description: Operations about transactions
+    children:
+      - url: "{{ _.base_url }}/{{ _.transaction_id }}"
+        name: Get specific transaction
+        meta:
+          id: req_66d9350184d44883ab21f017915e3ec3
+          created: 1704355180343
+          modified: 1726841308241
+          isPrivate: false
+          sortKey: -1704355180343
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/"
+        name: List transactions
+        meta:
+          id: req_dc40fde6b589435298c7142347494923
+          created: 1704355180343
+          modified: 1726841308242
+          isPrivate: false
+          sortKey: -1704355180343
+        method: GET
+        headers:
+          - name: apikey
+            value: "{{ _.apikey }}"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: BanKonG
+    meta:
+      id: fld_8204e6f481c74a4fa7a43375f2958656
+      created: 1704355180342
+      modified: 1726841308240
+      sortKey: -1704355180342
+      description: All APIs related to BanKonG
+    children:
+      - url: "{{ _.base_url }}/"
+        name: List transactions
+        meta:
+          id: req_5f79985ed489473eb9f6c952bd1b266b
+          created: 1704355180342
+          modified: 1726841308241
+          isPrivate: false
+          sortKey: -1704355180342
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/{{ _.transaction_id }}"
+        name: Get specific transaction
+        meta:
+          id: req_f693ce41e8de40a5a296aee6b6862dab
+          created: 1704355180343
+          modified: 1726841308241
+          isPrivate: false
+          sortKey: -1704355180343
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_4266ccb9c1614993a21efd21cd2342f4
+    created: 1726841308263
+    modified: 1726841308263
+environments:
+  name: Base Environment
+  meta:
+    id: env_762c472fc3d949109e595673b70223d6
+    created: 1704354088626
+    modified: 1726841308239
+    isPrivate: false
+  data:
+    base_url: "{{ _.scheme }}://{{ _.host }}{{ _.base_path }}"
+  subEnvironments:
+    - name: OpenAPI env api.banking.cloud
+      meta:
+        id: env_8760fb0b68ce460eb461f8e055a475c0
+        created: 1704355180340
+        modified: 1726841308239
+        isPrivate: false
+        sortKey: 1704355180340
+      data:
+        apikey: transactionsKey
+        base_path: /transactions/v1
+        host: api.bankong.cloud
+        scheme: https
+    - name: OpenAPI env bankong.service-conncetivity.com
+      meta:
+        id: env_f5d34d531e0940a885c25226ecaec421
+        created: 1704355180341
+        modified: 1726841308239
+        isPrivate: false
+        sortKey: 1704355180341
+      data:
+        apikey: apikey
+        base_path: /api/v1/transactions
+        host: bankong.service-conncetivity.com
+        scheme: https
+spec:
+  contents:
+    openapi: 3.0.0
+    servers:
+      - url: https://api.bankong.cloud/transactions/v1
+      - url: https://bankong.service-conncetivity.com/api/v1/transactions
+    tags:
+      - name: BanKonG
+        description: All APIs related to BanKonG
+      - name: Transactions
+        description: Operations about transactions
+    info:
+      contact:
+        email: sven@konghq.com
+        url: https://svenwal.de
+        name: Sven Walther
+      description: >
+        The BanKong transactions backend is available to all our customers after
+        having signed in.
+
+
+        It provides access to all you recent transactions and you can create new
+        transactions.
+
+
+        For testing purposes feel free to use the `transactionsKey` api key
+
+
+        All documentation and self service for an API key are available at the
+        [BanKonG developer portal](https://developer.bankong.cloud/).
+      title: BanKonG transactions
+      version: 1.3.0
+    paths:
+      /:
+        get:
+          description: Gets a list of all transaction
+          operationId: listAllTransactions
+          responses:
+            "200":
+              description: A list of all your transactions
+              content:
+                application/json:
+                  schema:
+                    $ref: "#/components/schemas/Transactions"
+          summary: List transactions
+          tags:
+            - BanKonG
+            - Transactions
+      /{transaction_id}:
+        get:
+          description: Get details about a speccific transaction
+          operationId: getTransaction
+          parameters:
+            - in: path
+              name: transaction_id
+              required: true
+              schema:
+                type: string
+              description: the id of the transaction
+          responses:
+            "200":
+              description: Provides all details about a specific transaction
+              content:
+                application/json:
+                  schema:
+                    $ref: "#/components/schemas/Transaction"
+          summary: Get specific transaction
+          tags:
+            - BanKonG
+            - Transactions
+          x-kong-plugin-request-validator:
+            enabled: true
+    components:
+      securitySchemes:
+        ApiKeyAuth:
+          type: apiKey
+          in: header
+          name: apikey
+      schemas:
+        Transactions:
+          type: array
+          items:
+            $ref: "#/components/schemas/Transaction"
+        Transaction:
+          type: object
+          properties:
+            source:
+              type: string
+            senderName:
+              type: string
+            destination:
+              type: string
+            amount:
+              type: string
+            currency:
+              type: string
+            subject:
+              type: string
+            id:
+              type: string
+  meta:
+    id: spc_5f5541c0f49f412a9867f65cd0293f7a
+    created: 1746115220975
+    modified: 1746115220976
+testSuites:
+  - name: AI Generated Tests
+    meta:
+      id: uts_cb6482edc2e94c05b98e5a4e438ca335
+      created: 1704355176901
+      modified: 1726841308243
+      sortKey: -1726841308243
+    tests:
+      - name: Get specific transaction
+        meta:
+          id: ut_06c69b0543df4e0793f5b2594a1a278a
+          created: 1704355193357
+          modified: 1726841308243
+          sortKey: -1726841308243
+        requestId: req_996b8b2b5b14472e8f734ad60ed8409d
+        code: |-
+          // Auto-generated with Insomnia AI
+
+          const response = await insomnia.send();
+
+          // Parse the response body as JSON
+          const body = JSON.parse(response.data);
+
+          // Assert that the status code is 200
+          expect(response.status).to.equal(200);
+
+          // Assert that the status message is 'OK'
+          expect(response.statusMessage).to.equal('OK');
+
+          // Assert that the response time is less than 2000ms
+          expect(response.responseTime).to.be.below(2000);
+
+          // Assert that the response body has a 'transaction_id' property
+          expect(body).to.have.property('transaction_id');
+
+          // Assert that the 'transaction_id' property is a string
+          expect(body.transaction_id).to.be.a('string');
+      - name: List transactions
+        meta:
+          id: ut_8160320889cc4392909970019d89ca78
+          created: 1704355194212
+          modified: 1726841308243
+          sortKey: -1726841308243
+        requestId: req_4d5cdb5741cf4aa7ba6ec1ed6cedd317
+        code: |-
+          // Auto-generated with Insomnia AI
+
+          const response = await insomnia.send();
+
+          // Parse the JSON response
+          const data = JSON.parse(response.data);
+
+          // Check the status code
+          expect(response.status).to.equal(200);
+
+          // Check the response time
+          expect(response.responseTime).to.be.a('number');
+
+          // Check the response body
+          expect(data).to.be.an('array');
+
+          data.forEach(transaction => {
+            expect(transaction).to.be.an('object');
+            expect(transaction.source).to.be.a('string');
+            expect(transaction.senderName).to.be.a('string');
+            expect(transaction.destination).to.be.a('string');
+            expect(transaction.amount).to.be.a('string');
+            expect(transaction.currency).to.be.a('string');
+            expect(transaction.subject).to.be.a('string');
+            expect(transaction.id).to.be.a('string');
+          });
+      - name: Get specific transaction
+        meta:
+          id: ut_b51b8ba5654f4a83b8fa1074bf09f953
+          created: 1704355197546
+          modified: 1726841308242
+          sortKey: -1726841308242
+        requestId: req_16b6594e257644bb85d8b5f9111b9604
+        code: |-
+          // Auto-generated with Insomnia AI
+
+          const response = await insomnia.send();
+
+          // Parse response body
+          const body = JSON.parse(response.data);
+
+          // Assert status code
+          expect(response.status).to.equal(200);
+
+          // Assert response time
+          expect(response.responseTime).to.be.a('number');
+
+          // Assert headers
+          expect(response.headers).to.be.an('object');
+
+          // Assert body
+          expect(body).to.be.an('object');
+      - name: List transactions
+        meta:
+          id: ut_0e1db633f24c450da774219e5472db03
+          created: 1704355223083
+          modified: 1726841308243
+          sortKey: -1726841308243
+        requestId: req_cd9f5656542e426cb42c3098bfcae54b
+        code: >-
+          // Auto-generated with Insomnia AI
+
+
+          const response = await insomnia.send();
+
+
+          // Parse the response body as JSON
+
+          const body = JSON.parse(response.data);
+
+
+          // Assert that the response status is 200
+
+          expect(response.status).to.equal(200);
+
+
+          // Assert that the response body is an array
+
+          expect(body).to.be.an('array');
+
+
+          // Assert that each item in the response body has the required
+          properties
+
+          body.forEach(item => {
+            expect(item).to.have.property('source').that.is.a('string');
+            expect(item).to.have.property('senderName').that.is.a('string');
+            expect(item).to.have.property('destination').that.is.a('string');
+            expect(item).to.have.property('amount').that.is.a('string');
+            expect(item).to.have.property('currency').that.is.a('string');
+            expect(item).to.have.property('subject').that.is.a('string');
+            expect(item).to.have.property('id').that.is.a('string');
+          });
